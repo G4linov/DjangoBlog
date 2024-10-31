@@ -1,23 +1,23 @@
 <header>
 <nav class="navbar navbar-light" style="background-color: lightskyblue">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="{% url 'blogm:index' %}">
             <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            Блогикум
+            Блог
           </a>        
           <ul class="nav  nav-pills">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">
+              <a class="nav-link active" href="{% url 'blogm:index' %}">
                 Лента записей
               </a>
             </li>
             <li class="nav-item">              
-              <a class="nav-link" href="about.html">
+              <a class="nav-link" href="{% url 'pages:about' %}">
                 О проекте
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="rules.html">
+              <a class="nav-link" href="{% url 'pages:rules' %}">
                 Наши правила
               </a>
             </li>

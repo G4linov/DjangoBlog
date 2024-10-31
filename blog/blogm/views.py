@@ -44,7 +44,8 @@ posts = [
 ]
 
 def index(request):
-    return render(request, 'blogm/index.html')
+    posts_print = {'posts' : posts}
+    return render(request, 'blogm/index.html', posts_print)
 
 def post_detail(request, post_id):
     post_context = posts[post_id]
