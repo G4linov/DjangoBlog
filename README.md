@@ -1,2 +1,1 @@
-# DjangoBlog
-Django simple blog
+# Blogicum
