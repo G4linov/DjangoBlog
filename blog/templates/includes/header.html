@@ -1,23 +1,25 @@
+{% load static %}
+{% with request.resolver_match.view_name as view_name %}
 <header>
 <nav class="navbar navbar-light" style="background-color: lightskyblue">
         <div class="container">
           <a class="navbar-brand" href="{% url 'blogm:index' %}">
-            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="{% static 'img/logo.png'%}" width="30" height="30" class="d-inline-block align-top" alt="">
             Блог
           </a>        
           <ul class="nav  nav-pills">
             <li class="nav-item">
-              <a class="nav-link active" href="{% url 'blogm:index' %}">
+              <a class="nav-link {% if view_name  == 'homepage:index' %}active{% endif %}" href="{% url 'blogm:index' %}">
                 Лента записей
               </a>
             </li>
             <li class="nav-item">              
-              <a class="nav-link" href="{% url 'pages:about' %}">
+              <a class="nav-link {% if view_name  == 'homepage:index' %}active{% endif %}" href="{% url 'pages:about' %}">
                 О проекте
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'pages:rules' %}">
+              <a class="nav-link {% if view_name  == 'homepage:index' %}active{% endif %}" href="{% url 'pages:rules' %}">
                 Наши правила
               </a>
             </li>
