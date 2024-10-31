@@ -19,7 +19,7 @@
           </ul>
 
           <p>
-              {{post.text|truncatewords:4}}
+              {{post.text|truncatewords:10}}
           </p>
           <a href="{%url 'blogm:post_detail' post.id %}">Читать полный текст</a>
         </article>

@@ -9,17 +9,17 @@
           </a>        
           <ul class="nav  nav-pills">
             <li class="nav-item">
-              <a class="nav-link {% if view_name  == 'homepage:index' %}active{% endif %}" href="{% url 'blogm:index' %}">
+              <a class="nav-link {% if view_name  == 'blogm:index' %}active{% endif %}" href="{% url 'blogm:index' %}">
                 Лента записей
               </a>
             </li>
             <li class="nav-item">              
-              <a class="nav-link {% if view_name  == 'homepage:index' %}active{% endif %}" href="{% url 'pages:about' %}">
+              <a class="nav-link {% if view_name  == 'pages:about' %}active{% endif %}" href="{% url 'pages:about' %}">
                 О проекте
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if view_name  == 'homepage:index' %}active{% endif %}" href="{% url 'pages:rules' %}">
+              <a class="nav-link {% if view_name  == 'pages:rules' %}active{% endif %}" href="{% url 'pages:rules' %}">
                 Наши правила
               </a>
             </li>
@@ -27,3 +27,4 @@
         </div>
       </nav>
   </header>
+{% endwith %}
