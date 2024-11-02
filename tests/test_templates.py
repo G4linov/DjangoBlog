@@ -8,11 +8,11 @@ from tests.conftest import try_get_url
 
 @pytest.mark.parametrize(
     'url, template', [
-        ('', 'blog/index.html'),
-        ('posts/0/', 'blog/detail.html'),
-        ('posts/1/', 'blog/detail.html'),
-        ('posts/2/', 'blog/detail.html'),
-        ('category/category_slug/', 'blog/category.html'),
+        ('', 'blogm/index.html'),
+        ('posts/0/', 'blogm/detail.html'),
+        ('posts/1/', 'blogm/detail.html'),
+        ('posts/2/', 'blogm/detail.html'),
+        ('category/category_slug/', 'blogm/category.html'),
         ('pages/about/', 'pages/about.html'),
         ('pages/rules/', 'pages/rules.html'),
     ]

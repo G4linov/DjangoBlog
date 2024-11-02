@@ -8,7 +8,7 @@ from django.template import TemplateDoesNotExist
 @pytest.fixture()
 def urlpatterns(imports_by_full_name):
     urlpattern_paths = [
-        'pages.urls.urlpatterns', 'blog.urls.urlpatterns']
+        'pages.urls.urlpatterns', 'blogm.urls.urlpatterns']
     urlpattern_vals = [imports_by_full_name[p] for p in urlpattern_paths]
     expected_names = [
         ('about', 'rules'),
@@ -16,8 +16,8 @@ def urlpatterns(imports_by_full_name):
     ]
     expected_views = [
         ('pages.views.about', 'pages.views.rules'),
-        ('blog.views.index', 'blog.views.post_detail',
-         'blog.views.category_posts'),
+        ('blogm.views.index', 'blogm.views.post_detail',
+         'blogm.views.category_posts'),
     ]
     return zip(
         urlpattern_paths, urlpattern_vals, expected_names, expected_views)
@@ -25,7 +25,7 @@ def urlpatterns(imports_by_full_name):
 
 @pytest.fixture()
 def settings_app_name():
-    return 'blogicum'
+    return 'blog'
 
 
 @pytest.fixture()
@@ -35,7 +35,7 @@ def root_dir():
 
 @pytest.fixture()
 def project_dirname():
-    return 'blogicum'
+    return 'blog'
 
 
 @pytest.fixture()
